@@ -1,7 +1,7 @@
 {
   "applications": {
     "gecko": {
-      "id": "lean-tab-limiter@etienneguerlain.fr",
+      "id": "lean-tab-limiter-advanced@piro.sakura.ne.jp",
       "strict_min_version": "58.0a1"
     }
   },
@@ -16,9 +16,9 @@
   },
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
-  "name": "Lean Tab Limiter",
-  "author": "Etienne Guerlain",
-  "homepage_url": "https://github.com/eguerlain/lean-tab-limiter",
+  "name": "Lean Tab Limiter Advanced",
+  "author": "YUKI Hiroshi",
+  "homepage_url": "https://github.com/piroor/lean-tab-limiter",
   "icons": {
     "48": "icons/lean-tab-limiter-48.png"
   },
