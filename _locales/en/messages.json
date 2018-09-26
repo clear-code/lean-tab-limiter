@@ -1,6 +1,11 @@
 {
   "extensionDescription": { "message": "Limits the number of tabs that can be opened" },
 
+  "notify_blocked": { "message": "You cannot open tabs more than $COUNT$",
+    "placeholders": {
+      "count": { "content": "$1", "example": "2" }
+    }},
+
   "tab_limit_label":      { "message": "Max Tab Limit" },
   "save_button_label":    { "message": "Save" },
   "default_button_label": { "message": "Back to Default" }

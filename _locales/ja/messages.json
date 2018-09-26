@@ -1,6 +1,11 @@
 {
   "extensionDescription": { "message": "開けるタブの数を制限します" },
 
+  "notify_blocked": { "message": "$COUNT$個以上のタブは開けません",
+    "placeholders": {
+      "count": { "content": "$1", "example": "2" }
+    }},
+
   "tab_limit_label":      { "message": "タブの最大数" },
   "save_button_label":    { "message": "保存" },
   "default_button_label": { "message": "初期値に戻す" }
