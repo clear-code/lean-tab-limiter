@@ -14,7 +14,7 @@
     "page": "options/options.html",
     "browser_style": true
   },
-  "description": "Limits the number of tabs that can be opened",
+  "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
   "name": "Lean Tab Limiter",
   "author": "Etienne Guerlain",
@@ -26,6 +26,7 @@
     "tabs",
     "storage"
   ],
+  "default_locale": "en",
   "version": "0.1",
   "DEFAULT_TAB_LIMIT": 6
 }

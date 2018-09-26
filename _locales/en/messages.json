@@ -1,0 +1,7 @@
+{
+  "extensionDescription": { "message": "Limits the number of tabs that can be opened" },
+
+  "tab_limit_label":      { "message": "Max Tab Limit" },
+  "save_button_label":    { "message": "Save" },
+  "default_button_label": { "message": "Back to Default" }
+}
