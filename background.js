@@ -72,9 +72,9 @@ const reactToNewTab = async tab => {
 
   if (!options.notifyBlocked) return
   if (clearNotification) clearTimeout(clearNotification)
-  const title = options.notifyBlockedTitle || browser.runtime.getManifest().name
+  const title = (options.notifyBlockedTitle || browser.runtime.getManifest().name).trim()
   let message = options.notifyBlockedMessage
-  if (message) message = message.replace(/%s\s*\+\s*1/gi, options.limit + 1).replace(/%s/gi, options.limit)
+  if (message) message = message.replace(/%s\s*\+\s*1/gi, options.limit + 1).replace(/%s/gi, options.limit).trim()
   else message = browser.i18n.getMessage('notify_blocked', [options.limit])
   browser.notifications.create('notify-blocked', {
     type:    'basic',

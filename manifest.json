@@ -28,7 +28,7 @@
     "notifications"
   ],
   "default_locale": "en",
-  "version": "0.4",
+  "version": "0.5",
   "DEFAULT_TAB_LIMIT": 6,
   "DEFAULT_NOTIFY_BLOCKED": true,
   "DEFAULT_NOTIFY_BLCOKED_DURATION": 5000
