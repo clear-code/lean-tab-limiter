@@ -17,7 +17,7 @@
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
   "name": "Lean Tab Limiter Advanced",
-  "author": "YUKI Hiroshi",
+  "author": "ClearCode Inc.",
   "homepage_url": "https://github.com/clear-code/lean-tab-limiter",
   "icons": {
     "48": "icons/lean-tab-limiter-48.png"
