@@ -1,7 +1,7 @@
 {
   "applications": {
     "gecko": {
-      "id": "lean-tab-limiter-advanced@piro.sakura.ne.jp",
+      "id": "lean-tab-limiter-advanced@clear-code.com",
       "strict_min_version": "58.0a1"
     }
   },
@@ -18,7 +18,7 @@
   "manifest_version": 2,
   "name": "Lean Tab Limiter Advanced",
   "author": "YUKI Hiroshi",
-  "homepage_url": "https://github.com/piroor/lean-tab-limiter",
+  "homepage_url": "https://github.com/clear-code/lean-tab-limiter",
   "icons": {
     "48": "icons/lean-tab-limiter-48.png"
   },
