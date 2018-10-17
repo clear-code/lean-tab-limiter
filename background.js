@@ -7,12 +7,16 @@
 const DEFAULT_OPTIONS = {
   limit:                 browser.runtime.getManifest().DEFAULT_TAB_LIMIT,
   notifyBlocked:         browser.runtime.getManifest().DEFAULT_NOTIFY_BLOCKED,
-  notifyBlockedDuration: browser.runtime.getManifest().DEFAULT_NOTIFY_BLCOKED_DURATION
+  notifyBlockedDuration: browser.runtime.getManifest().DEFAULT_NOTIFY_BLCOKED_DURATION,
+  notifyBlockedTitle:    '',
+  notifyBlockedMessage:  ''
 }
 const options = {
   limit:                 DEFAULT_OPTIONS.limit,
   notifyBlocked:         DEFAULT_OPTIONS.notifyBlocked,
-  notifyBlockedDuration: DEFAULT_OPTIONS.notifyBlockedDuration
+  notifyBlockedDuration: DEFAULT_OPTIONS.notifyBlockedDuration,
+  notifyBlockedTitle:    '',
+  notifyBlockedMessage:  ''
 }
 
 const parseOptions = (values) => {
@@ -20,7 +24,9 @@ const parseOptions = (values) => {
     limit:                 parseInt(values['tab-limit']),
     notifyBlocked:         typeof values['notify-blocked'] == 'boolean' ?
                              values['notify-blocked'] : undefined,
-    notifyBlockedDuration: parseInt(values['notify-blocked-duration'])
+    notifyBlockedDuration: parseInt(values['notify-blocked-duration']),
+    notifyBlockedTitle:    values['notify-blocked-title'],
+    notifyBlockedMessage:  values['notify-blocked-message']
   }
 }
 
@@ -66,10 +72,14 @@ const reactToNewTab = async tab => {
 
   if (!options.notifyBlocked) return
   if (clearNotification) clearTimeout(clearNotification)
+  const title = options.notifyBlockedTitle || browser.runtime.getManifest().name
+  let message = options.notifyBlockedMessage
+  if (message) message = message.replace(/%s/gi, options.limit)
+  else message = browser.i18n.getMessage('notify_blocked', [options.limit])
   browser.notifications.create('notify-blocked', {
     type:    'basic',
-    title:   browser.runtime.getManifest().name,
-    message: browser.i18n.getMessage('notify_blocked', [options.limit])
+    title,
+    message
   })
   clearNotification = setTimeout(() => {
     browser.notifications.clear('notify-blocked')
